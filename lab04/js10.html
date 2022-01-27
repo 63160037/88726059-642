@@ -1,6 +1,28 @@
 <html>
     <head>
-        <title></title>
-        <body></body>
+        <title>Change inline text Example</title>
+        
     </head>
+    <body>
+        <script>
+            var AR = new Array();
+            AR[0] = "You are so sweet.";
+            AR[1] = "Don't be mad.";
+            AR[2] = "Fighting!!";
+            var i=0;
+            function next(){
+                i=(++i)%AR.length;
+                document.getElementById("here").innerHTML=AR[i];
+            }
+        </script>
+        Click on the middle section to have it change what it say. <br>
+        Text-1
+        <hr>
+        <div onclick="next()" id="here">
+            DEFAULT
+
+        </div>
+        <hr>
+        TEXT-2
+    </body>
 </html>
