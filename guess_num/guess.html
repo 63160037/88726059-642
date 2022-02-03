@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Guess Number</title>
+</head>
+<body>
+	<form method="post" name="guessnumber" onSubmit="return guessNumber();">
+		<label for="num">Guess Number Between 1 and 100 </label>
+		<input type="int" name="num" /> 
+	
+		<input type="submit" name="submit" value="Enter"  />
+	</form>
+		
+	
+		
+	<script LANGUAGE= "JavaScript">
+		
+		function guessNumber() {
+    		
+			let unum = document.guessnumber.num;  
+			let x = Math.floor((Math.random() * 100) + 1);
+			document.write(unum);
+			document.write(x);
+        	if (unum.value.match(numbers)) {
+            	return true; } 
+        	else {
+            	alert('ต้องเป็นตัวเลขเท่านั้น'); 
+            	unum. focus(); 
+            	return false;
+        	}
+			if(unum ==x){
+				alert("คุณตอบถูก");
+			}
+			else if(unum>x){
+				alert("มากไป");
+			}
+			else if(unum<x){
+				alert("น้อยไป");
+			}
+		
+    }
+
+
+		
+		
+		
+	</script>
+</body>
+</html>
+
